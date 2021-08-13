@@ -23,6 +23,7 @@ public class AlertTest {
 		driver.findElement(By.xpath("(//button[@class='btn btn-default btn-lg'])[1]")).click();
 		Alert confirm=driver.switchTo().alert();
 		System.out.println("Confirm message : "+confirm.getText());
+		System.out.println("Upadated by Tester 2 : ");
 		confirm.dismiss();
 		
 		driver.findElement(By.xpath("(//button[@class='btn btn-default btn-lg'])[2]")).click();
