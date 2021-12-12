@@ -10,29 +10,29 @@ public class AlertTest {
 	static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "E:\\Libs_Workshop\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\chromedriver_win32_v96\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.seleniumeasy.com/test/javascript-alert-box-demo.html");
 		driver.manage().window().maximize();
-		
+
 		driver.findElement(By.xpath("//button[@class='btn btn-default']")).click();
-		Alert alert=driver.switchTo().alert();
-		System.out.println("Alert Message : "+alert.getText());
+		Alert alert = driver.switchTo().alert();
+		System.out.println("Alert Message : " + alert.getText());
 		alert.accept();
-		
+
 		driver.findElement(By.xpath("(//button[@class='btn btn-default btn-lg'])[1]")).click();
-		Alert confirm=driver.switchTo().alert();
-		System.out.println("Confirm message : "+confirm.getText());
+		Alert confirm = driver.switchTo().alert();
+		System.out.println("Confirm message : " + confirm.getText());
 		System.out.println("Upadated by Tester 2 : ");
 		confirm.dismiss();
-		
+
 		driver.findElement(By.xpath("(//button[@class='btn btn-default btn-lg'])[2]")).click();
-		Alert confirm1=driver.switchTo().alert();
+		Alert confirm1 = driver.switchTo().alert();
 		confirm1.sendKeys("Tteexxtt");
 		Thread.sleep(2000);
-		System.out.println("Confirm message : "+confirm1.getText());
+		System.out.println("Confirm message : " + confirm1.getText());
 		confirm1.accept();
-		
+
 	}
 
 }

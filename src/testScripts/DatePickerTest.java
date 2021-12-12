@@ -9,7 +9,7 @@ public class DatePickerTest {
 	static WebDriver driver;
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "E:\\Libs_Workshop\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\chromedriver_win32_v96\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html");
 		driver.manage().window().maximize();
@@ -33,7 +33,7 @@ public class DatePickerTest {
 			monthYearVal = driver.findElement(By.className("ui-datepicker-title")).getText();
 			monthYear = monthYearVal.split(" ");
 		}
-		//		String date = "//a[text()='"+expDate+"']";
+		// String date = "//a[text()='"+expDate+"']";
 		try {
 			driver.findElement(By.xpath("//a[text()='\"+expDate+\"']")).click();
 		} catch (Exception e) {

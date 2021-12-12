@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class HideImageTest {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "E:\\Libs_Workshop\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\chromedriver_win32_v96\\chromedriver.exe");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		Map<String, Object> prefs = new HashMap();
 
@@ -22,7 +22,7 @@ public class HideImageTest {
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", prefs);
 
-		//		To run in headless mode
+		// To run in headless mode
 //		options.addArguments("--headless");
 //		options.addArguments("--disable-gpu");
 //				options.addArguments("--disable-infobars");
