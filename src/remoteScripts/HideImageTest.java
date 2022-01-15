@@ -13,7 +13,7 @@ public class HideImageTest {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\chromedriver_win32_v96\\chromedriver.exe");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		Map<String, Object> prefs = new HashMap();
+		Map<String, Object> prefs = new HashMap<String, Object>();
 
 		// browser setting to disable images
 		prefs.put("profile.managed_default_content_settings.images", 2);
